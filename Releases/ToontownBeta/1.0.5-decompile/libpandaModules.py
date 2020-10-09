@@ -1,0 +1,1360 @@
+# Source Generated with Decompyle++
+# File: libpandaModules.pyo (Python 2.0)
+
+import libdtoolconfig
+import libpanda
+from ErrorUtilCode import *
+from NotifySeverity import *
+from CoordinateSystem import *
+from TransitionDirection import *
+from GeomBindType import *
+import AllTransitionsWrapper
+import AnimControlCollection
+import ArcChain
+import AsyncUtility
+import BitMask32
+import BoundedObject
+import Buffer
+import ButtonEvent
+import ButtonHandle
+import ButtonRegistry
+import CString
+import CardMaker
+import ChanCfgOverrides
+import ChanConfig
+import ClockObject
+import ComputedVertices
+import ConfigExpress
+import Configurable
+import ConnectionManager
+import ConnectionReader
+import ConnectionWriter
+import CurveFitter
+import DSearchPath
+import DatagramIterator
+import Decompressor
+import DepthTestProperty
+import DownloadDb
+import Downloader
+import EventParameter
+import EventQueue
+import EventReceiver
+import Extractor
+import FILE
+import Filename
+import Frustum
+import FrustumD
+import Fstream
+import GuiManager
+import HashVal
+import Ifstream
+import KeyboardButton
+import LOrientationf
+import LineSegs
+import Mat3
+import Mat3D
+import Mat4
+import Mat4D
+import MaterialPool
+import MathNumbers
+import ModelPool
+import ModifierButtons
+import MouseButton
+import MouseData
+import MouseWatcherParameter
+import Multifile
+import Namable
+import NetAddress
+import NodePathCollection
+import NodeTransitions
+import Notify
+import NotifyCategory
+import NurbsCurveInterface
+import Ofstream
+import Ostream
+import PGFrameStyle
+import PRFileDesc
+import PRNetAddr
+import PStatClient
+import PStatCollector
+import PTAUshort
+import Patcher
+import Patchfile
+import Plane
+import PlaneD
+import PointerToBaseAnimControl
+import PointerToBaseConnection
+import PointerToBaseNamedNode
+import PointerToBaseNode
+import PointerToBaseRefCountObjpvectorLPoint2f
+import PointerToBaseRefCountObjpvectorLPoint3f
+import PointerToBaseRefCountObjpvectorLVecBase4f
+import PointerToBaseRefCountObjpvectorLVector3f
+import PointerToBaseRefCountObjpvectorunsignedchar
+import ProfileTimer
+import PvectorbasicStringchar
+import QueuedReturnConnectionListenerData
+import QueuedReturnNetDatagram
+import QueuedReturnPointerToConnection
+import Ramfile
+import ReferenceCount
+import TexturePool
+import TimeVal
+import TimedCycle
+import TransparencyProperty
+import TraverserVisitorNullTransitionWrapperCollisionLevelState
+import TraverserVisitorNullTransitionWrapperCullLevelState
+import TypeHandle
+import TypeRegistry
+import TypedObject
+import UpdateSeq
+import VBase2
+import VBase2D
+import VBase3
+import VBase3D
+import VBase4
+import VBase4D
+import Writable
+import AnimControl
+import AudioManager
+import AudioSound
+import CollisionTraverser
+import Connection
+import ConnectionListener
+import Datagram
+import DisplayRegion
+import EventHandler
+import GraphicsWindow
+import Light
+import LineStream
+import MouseWatcherGroup
+import MultiplexStream
+import NodePath
+import PTAColorf
+import PTANormalf
+import PTATexCoordf
+import PTAUchar
+import PTAVertexf
+import PandaLoader
+import ParametricCurveCollection
+import ParametricCurveDrawer
+import Point2
+import Point2D
+import Point3
+import Point3D
+import Point4
+import Point4D
+import PointerToAnimControl
+import PointerToConnection
+import PointerToNamedNode
+import PointerToNode
+import Quat
+import QuatD
+import QueuedConnectionManager
+import QueuedConnectionReader
+import RecentConnectionReader
+import TypedReferenceCount
+import TypedWritable
+import Vec2
+import Vec2D
+import Vec3
+import Vec3D
+import Vec4
+import Vec4D
+import AutonomousLerp
+import BoundingVolume
+import ClientBase
+import CollisionEntry
+import CollisionHandler
+import Event
+import Fog
+import GeomBin
+import GraphicsChannel
+import GraphicsLayer
+import GraphicsPipe
+import GraphicsStateGuardianBase
+import GuiItem
+import GuiLabel
+import LRotationd
+import LRotationf
+import Lerp
+import LerpBlendType
+import LerpFunctor
+import MouseWatcherRegion
+import NetDatagram
+import Node
+import NurbsCurveDrawer
+import PGMouseWatcherParameter
+import Projection
+import QueuedConnectionListener
+import RenderTraverser
+import TextFont
+import TypedWritableReferenceCount
+import WritableConfigurable
+import AnimGroup
+import CollisionHandlerEvent
+import CollisionHandlerQueue
+import CollisionSolid
+import CullTraverser
+import DDrawable
+import EaseInBlendType
+import EaseInOutBlendType
+import EaseOutBlendType
+import FloatLerpFunctor
+import GeomBinBackToFront
+import GeomBinFixed
+import GeomBinGroup
+import GeomBinUnsorted
+import GeometricBoundingVolume
+import GraphicsStateGuardian
+import GuiBackground
+import GuiBehavior
+import GuiCollection
+import GuiFrame
+import GuiSign
+import IntLerpFunctor
+import Material
+import MultiLerpFunctor
+import NamedNode
+import NoBlendType
+import NodeRelation
+import NodeTransition
+import OrthoProjection
+import PGMouseWatcherBackground
+import PartGroup
+import PerspectiveProjection
+import PosHprLerpFunctor
+import PosHprScaleLerpFunctor
+import SimpleLerpFunctorLPoint2f
+import SimpleLerpFunctorLPoint3f
+import SimpleLerpFunctorLPoint4f
+import SimpleLerpFunctorLVecBase2f
+import SimpleLerpFunctorLVecBase3f
+import SimpleLerpFunctorLVecBase4f
+import SimpleLerpFunctorLVector2f
+import SimpleLerpFunctorLVector3f
+import SimpleLerpFunctorLVector4f
+import AmbientLight
+import AnimBundle
+import AnimBundleNode
+import AudioGuiFunctor
+import BoundingLine
+import CollisionHandlerPhysical
+import CollisionNode
+import CollisionPlane
+import CollisionRay
+import CollisionSegment
+import CollisionSphere
+import ColorLerpFunctor
+import ColorScaleLerpFunctor
+import DataNode
+import DataRelation
+import DirectionalLight
+import FiniteBoundingVolume
+import FloatQueryLerpFunctor
+import Geom
+import GeomBinNormal
+import GeomNode
+import GuiButton
+import GuiChooser
+import GuiListBox
+import GuiRollover
+import HprLerpFunctor
+import ImageBuffer
+import ImmediateTransition
+import IntQueryLerpFunctor
+import ModelNode
+import MovingPartBase
+import MultiTransitionPointerToLightLightNameClass
+import OmniBoundingVolume
+import OnOffTransition
+import OnTransition
+import PGItem
+import PGTop
+import ParametricCurve
+import PartBundle
+import PartBundleNode
+import PlaneNode
+import PointLight
+import PosLerpFunctor
+import ProjectionNode
+import RenderRelation
+import ScaleLerpFunctor
+import SimpleQueryLerpFunctorLPoint2f
+import SimpleQueryLerpFunctorLPoint3f
+import SimpleQueryLerpFunctorLPoint4f
+import SimpleQueryLerpFunctorLVecBase2f
+import SimpleQueryLerpFunctorLVecBase3f
+import SimpleQueryLerpFunctorLVecBase4f
+import SimpleQueryLerpFunctorLVector2f
+import SimpleQueryLerpFunctorLVector3f
+import SimpleQueryLerpFunctorLVector4f
+import SwitchNode
+import TextNode
+import AnalogNode
+import BoundingSphere
+import ButtonNode
+import ButtonThrower
+import Camera
+import Character
+import CharacterJointBundle
+import ChatInput
+import CollisionHandlerFloor
+import CollisionHandlerPusher
+import CollisionPolygon
+import ColorTransition
+import CubicCurveseg
+import DataValve
+import DecalTransition
+import DepthTestTransition
+import DepthWriteTransition
+import DialNode
+import DirectRenderTransition
+import DriveInterface
+import GeomBinTransition
+import GeomLine
+import GeomLinestrip
+import GeomPoint
+import GeomPolygon
+import GeomQuad
+import GeomSphere
+import GeomSprite
+import GeomTri
+import GeomTrifan
+import GeomTristrip
+import LightTransition
+import ModelRoot
+import MouseAndKeyboard
+import MouseWatcher
+import MovingPartACMatrixSwitchType
+import PGButton
+import PGEntry
+import PGWaitBar
+import PiecewiseCurve
+import PruneTransition
+import Spotlight
+import SwitchNodeOne
+import Texture
+import Trackball
+import TrackerNode
+import Transform2SG
+import TransparencyTransition
+import HermiteCurve
+import LODNode
+import MovingPartMatrix
+import NurbsCurve
+import SequenceNode
+import CharacterJoint
+from libpandaGlobals import *
+AllTransitionsWrapper.generateClass_AllTransitionsWrapper()
+AnimControlCollection.generateClass_AnimControlCollection()
+ArcChain.generateClass_ArcChain()
+AsyncUtility.generateClass_AsyncUtility()
+BitMask32.generateClass_BitMask32()
+BoundedObject.generateClass_BoundedObject()
+Buffer.generateClass_Buffer()
+ButtonEvent.generateClass_ButtonEvent()
+ButtonHandle.generateClass_ButtonHandle()
+ButtonRegistry.generateClass_ButtonRegistry()
+CString.generateClass_CString()
+CardMaker.generateClass_CardMaker()
+ChanCfgOverrides.generateClass_ChanCfgOverrides()
+ChanConfig.generateClass_ChanConfig()
+ClockObject.generateClass_ClockObject()
+ComputedVertices.generateClass_ComputedVertices()
+ConfigExpress.generateClass_ConfigExpress()
+Configurable.generateClass_Configurable()
+ConnectionManager.generateClass_ConnectionManager()
+ConnectionReader.generateClass_ConnectionReader()
+ConnectionWriter.generateClass_ConnectionWriter()
+CurveFitter.generateClass_CurveFitter()
+DSearchPath.generateClass_DSearchPath()
+DatagramIterator.generateClass_DatagramIterator()
+Decompressor.generateClass_Decompressor()
+DepthTestProperty.generateClass_DepthTestProperty()
+DownloadDb.generateClass_DownloadDb()
+Downloader.generateClass_Downloader()
+EventParameter.generateClass_EventParameter()
+EventQueue.generateClass_EventQueue()
+EventReceiver.generateClass_EventReceiver()
+Extractor.generateClass_Extractor()
+FILE.generateClass_FILE()
+Filename.generateClass_Filename()
+Frustum.generateClass_Frustum()
+FrustumD.generateClass_FrustumD()
+Fstream.generateClass_Fstream()
+GuiManager.generateClass_GuiManager()
+HashVal.generateClass_HashVal()
+Ifstream.generateClass_Ifstream()
+KeyboardButton.generateClass_KeyboardButton()
+LOrientationf.generateClass_LOrientationf()
+LineSegs.generateClass_LineSegs()
+Mat3.generateClass_Mat3()
+Mat3D.generateClass_Mat3D()
+Mat4.generateClass_Mat4()
+Mat4D.generateClass_Mat4D()
+MaterialPool.generateClass_MaterialPool()
+MathNumbers.generateClass_MathNumbers()
+ModelPool.generateClass_ModelPool()
+ModifierButtons.generateClass_ModifierButtons()
+MouseButton.generateClass_MouseButton()
+MouseData.generateClass_MouseData()
+MouseWatcherParameter.generateClass_MouseWatcherParameter()
+Multifile.generateClass_Multifile()
+Namable.generateClass_Namable()
+NetAddress.generateClass_NetAddress()
+NodePathCollection.generateClass_NodePathCollection()
+NodeTransitions.generateClass_NodeTransitions()
+Notify.generateClass_Notify()
+NotifyCategory.generateClass_NotifyCategory()
+NurbsCurveInterface.generateClass_NurbsCurveInterface()
+Ofstream.generateClass_Ofstream()
+Ostream.generateClass_Ostream()
+PGFrameStyle.generateClass_PGFrameStyle()
+PRFileDesc.generateClass_PRFileDesc()
+PRNetAddr.generateClass_PRNetAddr()
+PStatClient.generateClass_PStatClient()
+PStatCollector.generateClass_PStatCollector()
+PTAUshort.generateClass_PTAUshort()
+Patcher.generateClass_Patcher()
+Patchfile.generateClass_Patchfile()
+Plane.generateClass_Plane()
+PlaneD.generateClass_PlaneD()
+PointerToBaseAnimControl.generateClass_PointerToBaseAnimControl()
+PointerToBaseConnection.generateClass_PointerToBaseConnection()
+PointerToBaseNamedNode.generateClass_PointerToBaseNamedNode()
+PointerToBaseNode.generateClass_PointerToBaseNode()
+PointerToBaseRefCountObjpvectorLPoint2f.generateClass_PointerToBaseRefCountObjpvectorLPoint2f()
+PointerToBaseRefCountObjpvectorLPoint3f.generateClass_PointerToBaseRefCountObjpvectorLPoint3f()
+PointerToBaseRefCountObjpvectorLVecBase4f.generateClass_PointerToBaseRefCountObjpvectorLVecBase4f()
+PointerToBaseRefCountObjpvectorLVector3f.generateClass_PointerToBaseRefCountObjpvectorLVector3f()
+PointerToBaseRefCountObjpvectorunsignedchar.generateClass_PointerToBaseRefCountObjpvectorunsignedchar()
+ProfileTimer.generateClass_ProfileTimer()
+PvectorbasicStringchar.generateClass_PvectorbasicStringchar()
+QueuedReturnConnectionListenerData.generateClass_QueuedReturnConnectionListenerData()
+QueuedReturnNetDatagram.generateClass_QueuedReturnNetDatagram()
+QueuedReturnPointerToConnection.generateClass_QueuedReturnPointerToConnection()
+Ramfile.generateClass_Ramfile()
+ReferenceCount.generateClass_ReferenceCount()
+TexturePool.generateClass_TexturePool()
+TimeVal.generateClass_TimeVal()
+TimedCycle.generateClass_TimedCycle()
+TransparencyProperty.generateClass_TransparencyProperty()
+TraverserVisitorNullTransitionWrapperCollisionLevelState.generateClass_TraverserVisitorNullTransitionWrapperCollisionLevelState()
+TraverserVisitorNullTransitionWrapperCullLevelState.generateClass_TraverserVisitorNullTransitionWrapperCullLevelState()
+TypeHandle.generateClass_TypeHandle()
+TypeRegistry.generateClass_TypeRegistry()
+TypedObject.generateClass_TypedObject()
+UpdateSeq.generateClass_UpdateSeq()
+VBase2.generateClass_VBase2()
+VBase2D.generateClass_VBase2D()
+VBase3.generateClass_VBase3()
+VBase3D.generateClass_VBase3D()
+VBase4.generateClass_VBase4()
+VBase4D.generateClass_VBase4D()
+Writable.generateClass_Writable()
+AnimControl.generateClass_AnimControl()
+AudioManager.generateClass_AudioManager()
+AudioSound.generateClass_AudioSound()
+CollisionTraverser.generateClass_CollisionTraverser()
+Connection.generateClass_Connection()
+ConnectionListener.generateClass_ConnectionListener()
+Datagram.generateClass_Datagram()
+DisplayRegion.generateClass_DisplayRegion()
+EventHandler.generateClass_EventHandler()
+GraphicsWindow.generateClass_GraphicsWindow()
+Light.generateClass_Light()
+LineStream.generateClass_LineStream()
+MouseWatcherGroup.generateClass_MouseWatcherGroup()
+MultiplexStream.generateClass_MultiplexStream()
+NodePath.generateClass_NodePath()
+PTAColorf.generateClass_PTAColorf()
+PTANormalf.generateClass_PTANormalf()
+PTATexCoordf.generateClass_PTATexCoordf()
+PTAUchar.generateClass_PTAUchar()
+PTAVertexf.generateClass_PTAVertexf()
+PandaLoader.generateClass_PandaLoader()
+ParametricCurveCollection.generateClass_ParametricCurveCollection()
+ParametricCurveDrawer.generateClass_ParametricCurveDrawer()
+Point2.generateClass_Point2()
+Point2D.generateClass_Point2D()
+Point3.generateClass_Point3()
+Point3D.generateClass_Point3D()
+Point4.generateClass_Point4()
+Point4D.generateClass_Point4D()
+PointerToAnimControl.generateClass_PointerToAnimControl()
+PointerToConnection.generateClass_PointerToConnection()
+PointerToNamedNode.generateClass_PointerToNamedNode()
+PointerToNode.generateClass_PointerToNode()
+Quat.generateClass_Quat()
+QuatD.generateClass_QuatD()
+QueuedConnectionManager.generateClass_QueuedConnectionManager()
+QueuedConnectionReader.generateClass_QueuedConnectionReader()
+RecentConnectionReader.generateClass_RecentConnectionReader()
+TypedReferenceCount.generateClass_TypedReferenceCount()
+TypedWritable.generateClass_TypedWritable()
+Vec2.generateClass_Vec2()
+Vec2D.generateClass_Vec2D()
+Vec3.generateClass_Vec3()
+Vec3D.generateClass_Vec3D()
+Vec4.generateClass_Vec4()
+Vec4D.generateClass_Vec4D()
+AutonomousLerp.generateClass_AutonomousLerp()
+BoundingVolume.generateClass_BoundingVolume()
+ClientBase.generateClass_ClientBase()
+CollisionEntry.generateClass_CollisionEntry()
+CollisionHandler.generateClass_CollisionHandler()
+Event.generateClass_Event()
+Fog.generateClass_Fog()
+GeomBin.generateClass_GeomBin()
+GraphicsChannel.generateClass_GraphicsChannel()
+GraphicsLayer.generateClass_GraphicsLayer()
+GraphicsPipe.generateClass_GraphicsPipe()
+GraphicsStateGuardianBase.generateClass_GraphicsStateGuardianBase()
+GuiItem.generateClass_GuiItem()
+GuiLabel.generateClass_GuiLabel()
+LRotationd.generateClass_LRotationd()
+LRotationf.generateClass_LRotationf()
+Lerp.generateClass_Lerp()
+LerpBlendType.generateClass_LerpBlendType()
+LerpFunctor.generateClass_LerpFunctor()
+MouseWatcherRegion.generateClass_MouseWatcherRegion()
+NetDatagram.generateClass_NetDatagram()
+Node.generateClass_Node()
+NurbsCurveDrawer.generateClass_NurbsCurveDrawer()
+PGMouseWatcherParameter.generateClass_PGMouseWatcherParameter()
+Projection.generateClass_Projection()
+QueuedConnectionListener.generateClass_QueuedConnectionListener()
+RenderTraverser.generateClass_RenderTraverser()
+TextFont.generateClass_TextFont()
+TypedWritableReferenceCount.generateClass_TypedWritableReferenceCount()
+WritableConfigurable.generateClass_WritableConfigurable()
+AnimGroup.generateClass_AnimGroup()
+CollisionHandlerEvent.generateClass_CollisionHandlerEvent()
+CollisionHandlerQueue.generateClass_CollisionHandlerQueue()
+CollisionSolid.generateClass_CollisionSolid()
+CullTraverser.generateClass_CullTraverser()
+DDrawable.generateClass_DDrawable()
+EaseInBlendType.generateClass_EaseInBlendType()
+EaseInOutBlendType.generateClass_EaseInOutBlendType()
+EaseOutBlendType.generateClass_EaseOutBlendType()
+FloatLerpFunctor.generateClass_FloatLerpFunctor()
+GeomBinBackToFront.generateClass_GeomBinBackToFront()
+GeomBinFixed.generateClass_GeomBinFixed()
+GeomBinGroup.generateClass_GeomBinGroup()
+GeomBinUnsorted.generateClass_GeomBinUnsorted()
+GeometricBoundingVolume.generateClass_GeometricBoundingVolume()
+GraphicsStateGuardian.generateClass_GraphicsStateGuardian()
+GuiBackground.generateClass_GuiBackground()
+GuiBehavior.generateClass_GuiBehavior()
+GuiCollection.generateClass_GuiCollection()
+GuiFrame.generateClass_GuiFrame()
+GuiSign.generateClass_GuiSign()
+IntLerpFunctor.generateClass_IntLerpFunctor()
+Material.generateClass_Material()
+MultiLerpFunctor.generateClass_MultiLerpFunctor()
+NamedNode.generateClass_NamedNode()
+NoBlendType.generateClass_NoBlendType()
+NodeRelation.generateClass_NodeRelation()
+NodeTransition.generateClass_NodeTransition()
+OrthoProjection.generateClass_OrthoProjection()
+PGMouseWatcherBackground.generateClass_PGMouseWatcherBackground()
+PartGroup.generateClass_PartGroup()
+PerspectiveProjection.generateClass_PerspectiveProjection()
+PosHprLerpFunctor.generateClass_PosHprLerpFunctor()
+PosHprScaleLerpFunctor.generateClass_PosHprScaleLerpFunctor()
+SimpleLerpFunctorLPoint2f.generateClass_SimpleLerpFunctorLPoint2f()
+SimpleLerpFunctorLPoint3f.generateClass_SimpleLerpFunctorLPoint3f()
+SimpleLerpFunctorLPoint4f.generateClass_SimpleLerpFunctorLPoint4f()
+SimpleLerpFunctorLVecBase2f.generateClass_SimpleLerpFunctorLVecBase2f()
+SimpleLerpFunctorLVecBase3f.generateClass_SimpleLerpFunctorLVecBase3f()
+SimpleLerpFunctorLVecBase4f.generateClass_SimpleLerpFunctorLVecBase4f()
+SimpleLerpFunctorLVector2f.generateClass_SimpleLerpFunctorLVector2f()
+SimpleLerpFunctorLVector3f.generateClass_SimpleLerpFunctorLVector3f()
+SimpleLerpFunctorLVector4f.generateClass_SimpleLerpFunctorLVector4f()
+AmbientLight.generateClass_AmbientLight()
+AnimBundle.generateClass_AnimBundle()
+AnimBundleNode.generateClass_AnimBundleNode()
+AudioGuiFunctor.generateClass_AudioGuiFunctor()
+BoundingLine.generateClass_BoundingLine()
+CollisionHandlerPhysical.generateClass_CollisionHandlerPhysical()
+CollisionNode.generateClass_CollisionNode()
+CollisionPlane.generateClass_CollisionPlane()
+CollisionRay.generateClass_CollisionRay()
+CollisionSegment.generateClass_CollisionSegment()
+CollisionSphere.generateClass_CollisionSphere()
+ColorLerpFunctor.generateClass_ColorLerpFunctor()
+ColorScaleLerpFunctor.generateClass_ColorScaleLerpFunctor()
+DataNode.generateClass_DataNode()
+DataRelation.generateClass_DataRelation()
+DirectionalLight.generateClass_DirectionalLight()
+FiniteBoundingVolume.generateClass_FiniteBoundingVolume()
+FloatQueryLerpFunctor.generateClass_FloatQueryLerpFunctor()
+Geom.generateClass_Geom()
+GeomBinNormal.generateClass_GeomBinNormal()
+GeomNode.generateClass_GeomNode()
+GuiButton.generateClass_GuiButton()
+GuiChooser.generateClass_GuiChooser()
+GuiListBox.generateClass_GuiListBox()
+GuiRollover.generateClass_GuiRollover()
+HprLerpFunctor.generateClass_HprLerpFunctor()
+ImageBuffer.generateClass_ImageBuffer()
+ImmediateTransition.generateClass_ImmediateTransition()
+IntQueryLerpFunctor.generateClass_IntQueryLerpFunctor()
+ModelNode.generateClass_ModelNode()
+MovingPartBase.generateClass_MovingPartBase()
+MultiTransitionPointerToLightLightNameClass.generateClass_MultiTransitionPointerToLightLightNameClass()
+OmniBoundingVolume.generateClass_OmniBoundingVolume()
+OnOffTransition.generateClass_OnOffTransition()
+OnTransition.generateClass_OnTransition()
+PGItem.generateClass_PGItem()
+PGTop.generateClass_PGTop()
+ParametricCurve.generateClass_ParametricCurve()
+PartBundle.generateClass_PartBundle()
+PartBundleNode.generateClass_PartBundleNode()
+PlaneNode.generateClass_PlaneNode()
+PointLight.generateClass_PointLight()
+PosLerpFunctor.generateClass_PosLerpFunctor()
+ProjectionNode.generateClass_ProjectionNode()
+RenderRelation.generateClass_RenderRelation()
+ScaleLerpFunctor.generateClass_ScaleLerpFunctor()
+SimpleQueryLerpFunctorLPoint2f.generateClass_SimpleQueryLerpFunctorLPoint2f()
+SimpleQueryLerpFunctorLPoint3f.generateClass_SimpleQueryLerpFunctorLPoint3f()
+SimpleQueryLerpFunctorLPoint4f.generateClass_SimpleQueryLerpFunctorLPoint4f()
+SimpleQueryLerpFunctorLVecBase2f.generateClass_SimpleQueryLerpFunctorLVecBase2f()
+SimpleQueryLerpFunctorLVecBase3f.generateClass_SimpleQueryLerpFunctorLVecBase3f()
+SimpleQueryLerpFunctorLVecBase4f.generateClass_SimpleQueryLerpFunctorLVecBase4f()
+SimpleQueryLerpFunctorLVector2f.generateClass_SimpleQueryLerpFunctorLVector2f()
+SimpleQueryLerpFunctorLVector3f.generateClass_SimpleQueryLerpFunctorLVector3f()
+SimpleQueryLerpFunctorLVector4f.generateClass_SimpleQueryLerpFunctorLVector4f()
+SwitchNode.generateClass_SwitchNode()
+TextNode.generateClass_TextNode()
+AnalogNode.generateClass_AnalogNode()
+BoundingSphere.generateClass_BoundingSphere()
+ButtonNode.generateClass_ButtonNode()
+ButtonThrower.generateClass_ButtonThrower()
+Camera.generateClass_Camera()
+Character.generateClass_Character()
+CharacterJointBundle.generateClass_CharacterJointBundle()
+ChatInput.generateClass_ChatInput()
+CollisionHandlerFloor.generateClass_CollisionHandlerFloor()
+CollisionHandlerPusher.generateClass_CollisionHandlerPusher()
+CollisionPolygon.generateClass_CollisionPolygon()
+ColorTransition.generateClass_ColorTransition()
+CubicCurveseg.generateClass_CubicCurveseg()
+DataValve.generateClass_DataValve()
+DecalTransition.generateClass_DecalTransition()
+DepthTestTransition.generateClass_DepthTestTransition()
+DepthWriteTransition.generateClass_DepthWriteTransition()
+DialNode.generateClass_DialNode()
+DirectRenderTransition.generateClass_DirectRenderTransition()
+DriveInterface.generateClass_DriveInterface()
+GeomBinTransition.generateClass_GeomBinTransition()
+GeomLine.generateClass_GeomLine()
+GeomLinestrip.generateClass_GeomLinestrip()
+GeomPoint.generateClass_GeomPoint()
+GeomPolygon.generateClass_GeomPolygon()
+GeomQuad.generateClass_GeomQuad()
+GeomSphere.generateClass_GeomSphere()
+GeomSprite.generateClass_GeomSprite()
+GeomTri.generateClass_GeomTri()
+GeomTrifan.generateClass_GeomTrifan()
+GeomTristrip.generateClass_GeomTristrip()
+LightTransition.generateClass_LightTransition()
+ModelRoot.generateClass_ModelRoot()
+MouseAndKeyboard.generateClass_MouseAndKeyboard()
+MouseWatcher.generateClass_MouseWatcher()
+MovingPartACMatrixSwitchType.generateClass_MovingPartACMatrixSwitchType()
+PGButton.generateClass_PGButton()
+PGEntry.generateClass_PGEntry()
+PGWaitBar.generateClass_PGWaitBar()
+PiecewiseCurve.generateClass_PiecewiseCurve()
+PruneTransition.generateClass_PruneTransition()
+Spotlight.generateClass_Spotlight()
+SwitchNodeOne.generateClass_SwitchNodeOne()
+Texture.generateClass_Texture()
+Trackball.generateClass_Trackball()
+TrackerNode.generateClass_TrackerNode()
+Transform2SG.generateClass_Transform2SG()
+TransparencyTransition.generateClass_TransparencyTransition()
+HermiteCurve.generateClass_HermiteCurve()
+LODNode.generateClass_LODNode()
+MovingPartMatrix.generateClass_MovingPartMatrix()
+NurbsCurve.generateClass_NurbsCurve()
+SequenceNode.generateClass_SequenceNode()
+CharacterJoint.generateClass_CharacterJoint()
+AllTransitionsWrapper = AllTransitionsWrapper.AllTransitionsWrapper
+AnimControlCollection = AnimControlCollection.AnimControlCollection
+ArcChain = ArcChain.ArcChain
+AsyncUtility = AsyncUtility.AsyncUtility
+BitMask32 = BitMask32.BitMask32
+BoundedObject = BoundedObject.BoundedObject
+Buffer = Buffer.Buffer
+ButtonEvent = ButtonEvent.ButtonEvent
+ButtonHandle = ButtonHandle.ButtonHandle
+ButtonRegistry = ButtonRegistry.ButtonRegistry
+CString = CString.CString
+CardMaker = CardMaker.CardMaker
+ChanCfgOverrides = ChanCfgOverrides.ChanCfgOverrides
+ChanConfig = ChanConfig.ChanConfig
+ClockObject = ClockObject.ClockObject
+ComputedVertices = ComputedVertices.ComputedVertices
+ConfigExpress = ConfigExpress.ConfigExpress
+Configurable = Configurable.Configurable
+ConnectionManager = ConnectionManager.ConnectionManager
+ConnectionReader = ConnectionReader.ConnectionReader
+ConnectionWriter = ConnectionWriter.ConnectionWriter
+CurveFitter = CurveFitter.CurveFitter
+DSearchPath = DSearchPath.DSearchPath
+DatagramIterator = DatagramIterator.DatagramIterator
+Decompressor = Decompressor.Decompressor
+DepthTestProperty = DepthTestProperty.DepthTestProperty
+DownloadDb = DownloadDb.DownloadDb
+Downloader = Downloader.Downloader
+EventParameter = EventParameter.EventParameter
+EventQueue = EventQueue.EventQueue
+EventReceiver = EventReceiver.EventReceiver
+Extractor = Extractor.Extractor
+FILE = FILE.FILE
+Filename = Filename.Filename
+Frustum = Frustum.Frustum
+FrustumD = FrustumD.FrustumD
+Fstream = Fstream.Fstream
+GuiManager = GuiManager.GuiManager
+HashVal = HashVal.HashVal
+Ifstream = Ifstream.Ifstream
+KeyboardButton = KeyboardButton.KeyboardButton
+LOrientationf = LOrientationf.LOrientationf
+LineSegs = LineSegs.LineSegs
+Mat3 = Mat3.Mat3
+Mat3D = Mat3D.Mat3D
+Mat4 = Mat4.Mat4
+Mat4D = Mat4D.Mat4D
+MaterialPool = MaterialPool.MaterialPool
+MathNumbers = MathNumbers.MathNumbers
+ModelPool = ModelPool.ModelPool
+ModifierButtons = ModifierButtons.ModifierButtons
+MouseButton = MouseButton.MouseButton
+MouseData = MouseData.MouseData
+MouseWatcherParameter = MouseWatcherParameter.MouseWatcherParameter
+Multifile = Multifile.Multifile
+Namable = Namable.Namable
+NetAddress = NetAddress.NetAddress
+NodePathCollection = NodePathCollection.NodePathCollection
+NodeTransitions = NodeTransitions.NodeTransitions
+Notify = Notify.Notify
+NotifyCategory = NotifyCategory.NotifyCategory
+NurbsCurveInterface = NurbsCurveInterface.NurbsCurveInterface
+Ofstream = Ofstream.Ofstream
+Ostream = Ostream.Ostream
+PGFrameStyle = PGFrameStyle.PGFrameStyle
+PRFileDesc = PRFileDesc.PRFileDesc
+PRNetAddr = PRNetAddr.PRNetAddr
+PStatClient = PStatClient.PStatClient
+PStatCollector = PStatCollector.PStatCollector
+PTAUshort = PTAUshort.PTAUshort
+Patcher = Patcher.Patcher
+Patchfile = Patchfile.Patchfile
+Plane = Plane.Plane
+PlaneD = PlaneD.PlaneD
+PointerToBaseAnimControl = PointerToBaseAnimControl.PointerToBaseAnimControl
+PointerToBaseConnection = PointerToBaseConnection.PointerToBaseConnection
+PointerToBaseNamedNode = PointerToBaseNamedNode.PointerToBaseNamedNode
+PointerToBaseNode = PointerToBaseNode.PointerToBaseNode
+PointerToBaseRefCountObjpvectorLPoint2f = PointerToBaseRefCountObjpvectorLPoint2f.PointerToBaseRefCountObjpvectorLPoint2f
+PointerToBaseRefCountObjpvectorLPoint3f = PointerToBaseRefCountObjpvectorLPoint3f.PointerToBaseRefCountObjpvectorLPoint3f
+PointerToBaseRefCountObjpvectorLVecBase4f = PointerToBaseRefCountObjpvectorLVecBase4f.PointerToBaseRefCountObjpvectorLVecBase4f
+PointerToBaseRefCountObjpvectorLVector3f = PointerToBaseRefCountObjpvectorLVector3f.PointerToBaseRefCountObjpvectorLVector3f
+PointerToBaseRefCountObjpvectorunsignedchar = PointerToBaseRefCountObjpvectorunsignedchar.PointerToBaseRefCountObjpvectorunsignedchar
+ProfileTimer = ProfileTimer.ProfileTimer
+PvectorbasicStringchar = PvectorbasicStringchar.PvectorbasicStringchar
+QueuedReturnConnectionListenerData = QueuedReturnConnectionListenerData.QueuedReturnConnectionListenerData
+QueuedReturnNetDatagram = QueuedReturnNetDatagram.QueuedReturnNetDatagram
+QueuedReturnPointerToConnection = QueuedReturnPointerToConnection.QueuedReturnPointerToConnection
+Ramfile = Ramfile.Ramfile
+ReferenceCount = ReferenceCount.ReferenceCount
+TexturePool = TexturePool.TexturePool
+TimeVal = TimeVal.TimeVal
+TimedCycle = TimedCycle.TimedCycle
+TransparencyProperty = TransparencyProperty.TransparencyProperty
+TraverserVisitorNullTransitionWrapperCollisionLevelState = TraverserVisitorNullTransitionWrapperCollisionLevelState.TraverserVisitorNullTransitionWrapperCollisionLevelState
+TraverserVisitorNullTransitionWrapperCullLevelState = TraverserVisitorNullTransitionWrapperCullLevelState.TraverserVisitorNullTransitionWrapperCullLevelState
+TypeHandle = TypeHandle.TypeHandle
+TypeRegistry = TypeRegistry.TypeRegistry
+TypedObject = TypedObject.TypedObject
+UpdateSeq = UpdateSeq.UpdateSeq
+VBase2 = VBase2.VBase2
+VBase2D = VBase2D.VBase2D
+VBase3 = VBase3.VBase3
+VBase3D = VBase3D.VBase3D
+VBase4 = VBase4.VBase4
+VBase4D = VBase4D.VBase4D
+Writable = Writable.Writable
+AnimControl = AnimControl.AnimControl
+AudioManager = AudioManager.AudioManager
+AudioSound = AudioSound.AudioSound
+CollisionTraverser = CollisionTraverser.CollisionTraverser
+Connection = Connection.Connection
+ConnectionListener = ConnectionListener.ConnectionListener
+Datagram = Datagram.Datagram
+DisplayRegion = DisplayRegion.DisplayRegion
+EventHandler = EventHandler.EventHandler
+GraphicsWindow = GraphicsWindow.GraphicsWindow
+Light = Light.Light
+LineStream = LineStream.LineStream
+MouseWatcherGroup = MouseWatcherGroup.MouseWatcherGroup
+MultiplexStream = MultiplexStream.MultiplexStream
+NodePath = NodePath.NodePath
+PTAColorf = PTAColorf.PTAColorf
+PTANormalf = PTANormalf.PTANormalf
+PTATexCoordf = PTATexCoordf.PTATexCoordf
+PTAUchar = PTAUchar.PTAUchar
+PTAVertexf = PTAVertexf.PTAVertexf
+PandaLoader = PandaLoader.PandaLoader
+ParametricCurveCollection = ParametricCurveCollection.ParametricCurveCollection
+ParametricCurveDrawer = ParametricCurveDrawer.ParametricCurveDrawer
+Point2 = Point2.Point2
+Point2D = Point2D.Point2D
+Point3 = Point3.Point3
+Point3D = Point3D.Point3D
+Point4 = Point4.Point4
+Point4D = Point4D.Point4D
+PointerToAnimControl = PointerToAnimControl.PointerToAnimControl
+PointerToConnection = PointerToConnection.PointerToConnection
+PointerToNamedNode = PointerToNamedNode.PointerToNamedNode
+PointerToNode = PointerToNode.PointerToNode
+Quat = Quat.Quat
+QuatD = QuatD.QuatD
+QueuedConnectionManager = QueuedConnectionManager.QueuedConnectionManager
+QueuedConnectionReader = QueuedConnectionReader.QueuedConnectionReader
+RecentConnectionReader = RecentConnectionReader.RecentConnectionReader
+TypedReferenceCount = TypedReferenceCount.TypedReferenceCount
+TypedWritable = TypedWritable.TypedWritable
+Vec2 = Vec2.Vec2
+Vec2D = Vec2D.Vec2D
+Vec3 = Vec3.Vec3
+Vec3D = Vec3D.Vec3D
+Vec4 = Vec4.Vec4
+Vec4D = Vec4D.Vec4D
+AutonomousLerp = AutonomousLerp.AutonomousLerp
+BoundingVolume = BoundingVolume.BoundingVolume
+ClientBase = ClientBase.ClientBase
+CollisionEntry = CollisionEntry.CollisionEntry
+CollisionHandler = CollisionHandler.CollisionHandler
+Event = Event.Event
+Fog = Fog.Fog
+GeomBin = GeomBin.GeomBin
+GraphicsChannel = GraphicsChannel.GraphicsChannel
+GraphicsLayer = GraphicsLayer.GraphicsLayer
+GraphicsPipe = GraphicsPipe.GraphicsPipe
+GraphicsStateGuardianBase = GraphicsStateGuardianBase.GraphicsStateGuardianBase
+GuiItem = GuiItem.GuiItem
+GuiLabel = GuiLabel.GuiLabel
+LRotationd = LRotationd.LRotationd
+LRotationf = LRotationf.LRotationf
+Lerp = Lerp.Lerp
+LerpBlendType = LerpBlendType.LerpBlendType
+LerpFunctor = LerpFunctor.LerpFunctor
+MouseWatcherRegion = MouseWatcherRegion.MouseWatcherRegion
+NetDatagram = NetDatagram.NetDatagram
+Node = Node.Node
+NurbsCurveDrawer = NurbsCurveDrawer.NurbsCurveDrawer
+PGMouseWatcherParameter = PGMouseWatcherParameter.PGMouseWatcherParameter
+Projection = Projection.Projection
+QueuedConnectionListener = QueuedConnectionListener.QueuedConnectionListener
+RenderTraverser = RenderTraverser.RenderTraverser
+TextFont = TextFont.TextFont
+TypedWritableReferenceCount = TypedWritableReferenceCount.TypedWritableReferenceCount
+WritableConfigurable = WritableConfigurable.WritableConfigurable
+AnimGroup = AnimGroup.AnimGroup
+CollisionHandlerEvent = CollisionHandlerEvent.CollisionHandlerEvent
+CollisionHandlerQueue = CollisionHandlerQueue.CollisionHandlerQueue
+CollisionSolid = CollisionSolid.CollisionSolid
+CullTraverser = CullTraverser.CullTraverser
+DDrawable = DDrawable.DDrawable
+EaseInBlendType = EaseInBlendType.EaseInBlendType
+EaseInOutBlendType = EaseInOutBlendType.EaseInOutBlendType
+EaseOutBlendType = EaseOutBlendType.EaseOutBlendType
+FloatLerpFunctor = FloatLerpFunctor.FloatLerpFunctor
+GeomBinBackToFront = GeomBinBackToFront.GeomBinBackToFront
+GeomBinFixed = GeomBinFixed.GeomBinFixed
+GeomBinGroup = GeomBinGroup.GeomBinGroup
+GeomBinUnsorted = GeomBinUnsorted.GeomBinUnsorted
+GeometricBoundingVolume = GeometricBoundingVolume.GeometricBoundingVolume
+GraphicsStateGuardian = GraphicsStateGuardian.GraphicsStateGuardian
+GuiBackground = GuiBackground.GuiBackground
+GuiBehavior = GuiBehavior.GuiBehavior
+GuiCollection = GuiCollection.GuiCollection
+GuiFrame = GuiFrame.GuiFrame
+GuiSign = GuiSign.GuiSign
+IntLerpFunctor = IntLerpFunctor.IntLerpFunctor
+Material = Material.Material
+MultiLerpFunctor = MultiLerpFunctor.MultiLerpFunctor
+NamedNode = NamedNode.NamedNode
+NoBlendType = NoBlendType.NoBlendType
+NodeRelation = NodeRelation.NodeRelation
+NodeTransition = NodeTransition.NodeTransition
+OrthoProjection = OrthoProjection.OrthoProjection
+PGMouseWatcherBackground = PGMouseWatcherBackground.PGMouseWatcherBackground
+PartGroup = PartGroup.PartGroup
+PerspectiveProjection = PerspectiveProjection.PerspectiveProjection
+PosHprLerpFunctor = PosHprLerpFunctor.PosHprLerpFunctor
+PosHprScaleLerpFunctor = PosHprScaleLerpFunctor.PosHprScaleLerpFunctor
+SimpleLerpFunctorLPoint2f = SimpleLerpFunctorLPoint2f.SimpleLerpFunctorLPoint2f
+SimpleLerpFunctorLPoint3f = SimpleLerpFunctorLPoint3f.SimpleLerpFunctorLPoint3f
+SimpleLerpFunctorLPoint4f = SimpleLerpFunctorLPoint4f.SimpleLerpFunctorLPoint4f
+SimpleLerpFunctorLVecBase2f = SimpleLerpFunctorLVecBase2f.SimpleLerpFunctorLVecBase2f
+SimpleLerpFunctorLVecBase3f = SimpleLerpFunctorLVecBase3f.SimpleLerpFunctorLVecBase3f
+SimpleLerpFunctorLVecBase4f = SimpleLerpFunctorLVecBase4f.SimpleLerpFunctorLVecBase4f
+SimpleLerpFunctorLVector2f = SimpleLerpFunctorLVector2f.SimpleLerpFunctorLVector2f
+SimpleLerpFunctorLVector3f = SimpleLerpFunctorLVector3f.SimpleLerpFunctorLVector3f
+SimpleLerpFunctorLVector4f = SimpleLerpFunctorLVector4f.SimpleLerpFunctorLVector4f
+AmbientLight = AmbientLight.AmbientLight
+AnimBundle = AnimBundle.AnimBundle
+AnimBundleNode = AnimBundleNode.AnimBundleNode
+AudioGuiFunctor = AudioGuiFunctor.AudioGuiFunctor
+BoundingLine = BoundingLine.BoundingLine
+CollisionHandlerPhysical = CollisionHandlerPhysical.CollisionHandlerPhysical
+CollisionNode = CollisionNode.CollisionNode
+CollisionPlane = CollisionPlane.CollisionPlane
+CollisionRay = CollisionRay.CollisionRay
+CollisionSegment = CollisionSegment.CollisionSegment
+CollisionSphere = CollisionSphere.CollisionSphere
+ColorLerpFunctor = ColorLerpFunctor.ColorLerpFunctor
+ColorScaleLerpFunctor = ColorScaleLerpFunctor.ColorScaleLerpFunctor
+DataNode = DataNode.DataNode
+DataRelation = DataRelation.DataRelation
+DirectionalLight = DirectionalLight.DirectionalLight
+FiniteBoundingVolume = FiniteBoundingVolume.FiniteBoundingVolume
+FloatQueryLerpFunctor = FloatQueryLerpFunctor.FloatQueryLerpFunctor
+Geom = Geom.Geom
+GeomBinNormal = GeomBinNormal.GeomBinNormal
+GeomNode = GeomNode.GeomNode
+GuiButton = GuiButton.GuiButton
+GuiChooser = GuiChooser.GuiChooser
+GuiListBox = GuiListBox.GuiListBox
+GuiRollover = GuiRollover.GuiRollover
+HprLerpFunctor = HprLerpFunctor.HprLerpFunctor
+ImageBuffer = ImageBuffer.ImageBuffer
+ImmediateTransition = ImmediateTransition.ImmediateTransition
+IntQueryLerpFunctor = IntQueryLerpFunctor.IntQueryLerpFunctor
+ModelNode = ModelNode.ModelNode
+MovingPartBase = MovingPartBase.MovingPartBase
+MultiTransitionPointerToLightLightNameClass = MultiTransitionPointerToLightLightNameClass.MultiTransitionPointerToLightLightNameClass
+OmniBoundingVolume = OmniBoundingVolume.OmniBoundingVolume
+OnOffTransition = OnOffTransition.OnOffTransition
+OnTransition = OnTransition.OnTransition
+PGItem = PGItem.PGItem
+PGTop = PGTop.PGTop
+ParametricCurve = ParametricCurve.ParametricCurve
+PartBundle = PartBundle.PartBundle
+PartBundleNode = PartBundleNode.PartBundleNode
+PlaneNode = PlaneNode.PlaneNode
+PointLight = PointLight.PointLight
+PosLerpFunctor = PosLerpFunctor.PosLerpFunctor
+ProjectionNode = ProjectionNode.ProjectionNode
+RenderRelation = RenderRelation.RenderRelation
+ScaleLerpFunctor = ScaleLerpFunctor.ScaleLerpFunctor
+SimpleQueryLerpFunctorLPoint2f = SimpleQueryLerpFunctorLPoint2f.SimpleQueryLerpFunctorLPoint2f
+SimpleQueryLerpFunctorLPoint3f = SimpleQueryLerpFunctorLPoint3f.SimpleQueryLerpFunctorLPoint3f
+SimpleQueryLerpFunctorLPoint4f = SimpleQueryLerpFunctorLPoint4f.SimpleQueryLerpFunctorLPoint4f
+SimpleQueryLerpFunctorLVecBase2f = SimpleQueryLerpFunctorLVecBase2f.SimpleQueryLerpFunctorLVecBase2f
+SimpleQueryLerpFunctorLVecBase3f = SimpleQueryLerpFunctorLVecBase3f.SimpleQueryLerpFunctorLVecBase3f
+SimpleQueryLerpFunctorLVecBase4f = SimpleQueryLerpFunctorLVecBase4f.SimpleQueryLerpFunctorLVecBase4f
+SimpleQueryLerpFunctorLVector2f = SimpleQueryLerpFunctorLVector2f.SimpleQueryLerpFunctorLVector2f
+SimpleQueryLerpFunctorLVector3f = SimpleQueryLerpFunctorLVector3f.SimpleQueryLerpFunctorLVector3f
+SimpleQueryLerpFunctorLVector4f = SimpleQueryLerpFunctorLVector4f.SimpleQueryLerpFunctorLVector4f
+SwitchNode = SwitchNode.SwitchNode
+TextNode = TextNode.TextNode
+AnalogNode = AnalogNode.AnalogNode
+BoundingSphere = BoundingSphere.BoundingSphere
+ButtonNode = ButtonNode.ButtonNode
+ButtonThrower = ButtonThrower.ButtonThrower
+Camera = Camera.Camera
+Character = Character.Character
+CharacterJointBundle = CharacterJointBundle.CharacterJointBundle
+ChatInput = ChatInput.ChatInput
+CollisionHandlerFloor = CollisionHandlerFloor.CollisionHandlerFloor
+CollisionHandlerPusher = CollisionHandlerPusher.CollisionHandlerPusher
+CollisionPolygon = CollisionPolygon.CollisionPolygon
+ColorTransition = ColorTransition.ColorTransition
+CubicCurveseg = CubicCurveseg.CubicCurveseg
+DataValve = DataValve.DataValve
+DecalTransition = DecalTransition.DecalTransition
+DepthTestTransition = DepthTestTransition.DepthTestTransition
+DepthWriteTransition = DepthWriteTransition.DepthWriteTransition
+DialNode = DialNode.DialNode
+DirectRenderTransition = DirectRenderTransition.DirectRenderTransition
+DriveInterface = DriveInterface.DriveInterface
+GeomBinTransition = GeomBinTransition.GeomBinTransition
+GeomLine = GeomLine.GeomLine
+GeomLinestrip = GeomLinestrip.GeomLinestrip
+GeomPoint = GeomPoint.GeomPoint
+GeomPolygon = GeomPolygon.GeomPolygon
+GeomQuad = GeomQuad.GeomQuad
+GeomSphere = GeomSphere.GeomSphere
+GeomSprite = GeomSprite.GeomSprite
+GeomTri = GeomTri.GeomTri
+GeomTrifan = GeomTrifan.GeomTrifan
+GeomTristrip = GeomTristrip.GeomTristrip
+LightTransition = LightTransition.LightTransition
+ModelRoot = ModelRoot.ModelRoot
+MouseAndKeyboard = MouseAndKeyboard.MouseAndKeyboard
+MouseWatcher = MouseWatcher.MouseWatcher
+MovingPartACMatrixSwitchType = MovingPartACMatrixSwitchType.MovingPartACMatrixSwitchType
+PGButton = PGButton.PGButton
+PGEntry = PGEntry.PGEntry
+PGWaitBar = PGWaitBar.PGWaitBar
+PiecewiseCurve = PiecewiseCurve.PiecewiseCurve
+PruneTransition = PruneTransition.PruneTransition
+Spotlight = Spotlight.Spotlight
+SwitchNodeOne = SwitchNodeOne.SwitchNodeOne
+Texture = Texture.Texture
+Trackball = Trackball.Trackball
+TrackerNode = TrackerNode.TrackerNode
+Transform2SG = Transform2SG.Transform2SG
+TransparencyTransition = TransparencyTransition.TransparencyTransition
+HermiteCurve = HermiteCurve.HermiteCurve
+LODNode = LODNode.LODNode
+MovingPartMatrix = MovingPartMatrix.MovingPartMatrix
+NurbsCurve = NurbsCurve.NurbsCurve
+SequenceNode = SequenceNode.SequenceNode
+CharacterJoint = CharacterJoint.CharacterJoint
+from FFIExternalObject import registerInTypeMap
+registerInTypeMap(AllTransitionsWrapper)
+registerInTypeMap(AnimControlCollection)
+registerInTypeMap(ArcChain)
+registerInTypeMap(AsyncUtility)
+registerInTypeMap(BitMask32)
+registerInTypeMap(BoundedObject)
+registerInTypeMap(Buffer)
+registerInTypeMap(ButtonEvent)
+registerInTypeMap(ButtonHandle)
+registerInTypeMap(ButtonRegistry)
+registerInTypeMap(CString)
+registerInTypeMap(CardMaker)
+registerInTypeMap(ChanCfgOverrides)
+registerInTypeMap(ChanConfig)
+registerInTypeMap(ClockObject)
+registerInTypeMap(ComputedVertices)
+registerInTypeMap(ConfigExpress)
+registerInTypeMap(Configurable)
+registerInTypeMap(ConnectionManager)
+registerInTypeMap(ConnectionReader)
+registerInTypeMap(ConnectionWriter)
+registerInTypeMap(CurveFitter)
+registerInTypeMap(DSearchPath)
+registerInTypeMap(DatagramIterator)
+registerInTypeMap(Decompressor)
+registerInTypeMap(DepthTestProperty)
+registerInTypeMap(DownloadDb)
+registerInTypeMap(Downloader)
+registerInTypeMap(EventParameter)
+registerInTypeMap(EventQueue)
+registerInTypeMap(EventReceiver)
+registerInTypeMap(Extractor)
+registerInTypeMap(FILE)
+registerInTypeMap(Filename)
+registerInTypeMap(Frustum)
+registerInTypeMap(FrustumD)
+registerInTypeMap(Fstream)
+registerInTypeMap(GuiManager)
+registerInTypeMap(HashVal)
+registerInTypeMap(Ifstream)
+registerInTypeMap(KeyboardButton)
+registerInTypeMap(LOrientationf)
+registerInTypeMap(LineSegs)
+registerInTypeMap(Mat3)
+registerInTypeMap(Mat3D)
+registerInTypeMap(Mat4)
+registerInTypeMap(Mat4D)
+registerInTypeMap(MaterialPool)
+registerInTypeMap(MathNumbers)
+registerInTypeMap(ModelPool)
+registerInTypeMap(ModifierButtons)
+registerInTypeMap(MouseButton)
+registerInTypeMap(MouseData)
+registerInTypeMap(MouseWatcherParameter)
+registerInTypeMap(Multifile)
+registerInTypeMap(Namable)
+registerInTypeMap(NetAddress)
+registerInTypeMap(NodePathCollection)
+registerInTypeMap(NodeTransitions)
+registerInTypeMap(Notify)
+registerInTypeMap(NotifyCategory)
+registerInTypeMap(NurbsCurveInterface)
+registerInTypeMap(Ofstream)
+registerInTypeMap(Ostream)
+registerInTypeMap(PGFrameStyle)
+registerInTypeMap(PRFileDesc)
+registerInTypeMap(PRNetAddr)
+registerInTypeMap(PStatClient)
+registerInTypeMap(PStatCollector)
+registerInTypeMap(PTAUshort)
+registerInTypeMap(Patcher)
+registerInTypeMap(Patchfile)
+registerInTypeMap(Plane)
+registerInTypeMap(PlaneD)
+registerInTypeMap(PointerToBaseAnimControl)
+registerInTypeMap(PointerToBaseConnection)
+registerInTypeMap(PointerToBaseNamedNode)
+registerInTypeMap(PointerToBaseNode)
+registerInTypeMap(PointerToBaseRefCountObjpvectorLPoint2f)
+registerInTypeMap(PointerToBaseRefCountObjpvectorLPoint3f)
+registerInTypeMap(PointerToBaseRefCountObjpvectorLVecBase4f)
+registerInTypeMap(PointerToBaseRefCountObjpvectorLVector3f)
+registerInTypeMap(PointerToBaseRefCountObjpvectorunsignedchar)
+registerInTypeMap(ProfileTimer)
+registerInTypeMap(PvectorbasicStringchar)
+registerInTypeMap(QueuedReturnConnectionListenerData)
+registerInTypeMap(QueuedReturnNetDatagram)
+registerInTypeMap(QueuedReturnPointerToConnection)
+registerInTypeMap(Ramfile)
+registerInTypeMap(ReferenceCount)
+registerInTypeMap(TexturePool)
+registerInTypeMap(TimeVal)
+registerInTypeMap(TimedCycle)
+registerInTypeMap(TransparencyProperty)
+registerInTypeMap(TraverserVisitorNullTransitionWrapperCollisionLevelState)
+registerInTypeMap(TraverserVisitorNullTransitionWrapperCullLevelState)
+registerInTypeMap(TypeHandle)
+registerInTypeMap(TypeRegistry)
+registerInTypeMap(TypedObject)
+registerInTypeMap(UpdateSeq)
+registerInTypeMap(VBase2)
+registerInTypeMap(VBase2D)
+registerInTypeMap(VBase3)
+registerInTypeMap(VBase3D)
+registerInTypeMap(VBase4)
+registerInTypeMap(VBase4D)
+registerInTypeMap(Writable)
+registerInTypeMap(AnimControl)
+registerInTypeMap(AudioManager)
+registerInTypeMap(AudioSound)
+registerInTypeMap(CollisionTraverser)
+registerInTypeMap(Connection)
+registerInTypeMap(ConnectionListener)
+registerInTypeMap(Datagram)
+registerInTypeMap(DisplayRegion)
+registerInTypeMap(EventHandler)
+registerInTypeMap(GraphicsWindow)
+registerInTypeMap(Light)
+registerInTypeMap(LineStream)
+registerInTypeMap(MouseWatcherGroup)
+registerInTypeMap(MultiplexStream)
+registerInTypeMap(NodePath)
+registerInTypeMap(PTAColorf)
+registerInTypeMap(PTANormalf)
+registerInTypeMap(PTATexCoordf)
+registerInTypeMap(PTAUchar)
+registerInTypeMap(PTAVertexf)
+registerInTypeMap(PandaLoader)
+registerInTypeMap(ParametricCurveCollection)
+registerInTypeMap(ParametricCurveDrawer)
+registerInTypeMap(Point2)
+registerInTypeMap(Point2D)
+registerInTypeMap(Point3)
+registerInTypeMap(Point3D)
+registerInTypeMap(Point4)
+registerInTypeMap(Point4D)
+registerInTypeMap(PointerToAnimControl)
+registerInTypeMap(PointerToConnection)
+registerInTypeMap(PointerToNamedNode)
+registerInTypeMap(PointerToNode)
+registerInTypeMap(Quat)
+registerInTypeMap(QuatD)
+registerInTypeMap(QueuedConnectionManager)
+registerInTypeMap(QueuedConnectionReader)
+registerInTypeMap(RecentConnectionReader)
+registerInTypeMap(TypedReferenceCount)
+registerInTypeMap(TypedWritable)
+registerInTypeMap(Vec2)
+registerInTypeMap(Vec2D)
+registerInTypeMap(Vec3)
+registerInTypeMap(Vec3D)
+registerInTypeMap(Vec4)
+registerInTypeMap(Vec4D)
+registerInTypeMap(AutonomousLerp)
+registerInTypeMap(BoundingVolume)
+registerInTypeMap(ClientBase)
+registerInTypeMap(CollisionEntry)
+registerInTypeMap(CollisionHandler)
+registerInTypeMap(Event)
+registerInTypeMap(Fog)
+registerInTypeMap(GeomBin)
+registerInTypeMap(GraphicsChannel)
+registerInTypeMap(GraphicsLayer)
+registerInTypeMap(GraphicsPipe)
+registerInTypeMap(GraphicsStateGuardianBase)
+registerInTypeMap(GuiItem)
+registerInTypeMap(GuiLabel)
+registerInTypeMap(LRotationd)
+registerInTypeMap(LRotationf)
+registerInTypeMap(Lerp)
+registerInTypeMap(LerpBlendType)
+registerInTypeMap(LerpFunctor)
+registerInTypeMap(MouseWatcherRegion)
+registerInTypeMap(NetDatagram)
+registerInTypeMap(Node)
+registerInTypeMap(NurbsCurveDrawer)
+registerInTypeMap(PGMouseWatcherParameter)
+registerInTypeMap(Projection)
+registerInTypeMap(QueuedConnectionListener)
+registerInTypeMap(RenderTraverser)
+registerInTypeMap(TextFont)
+registerInTypeMap(TypedWritableReferenceCount)
+registerInTypeMap(WritableConfigurable)
+registerInTypeMap(AnimGroup)
+registerInTypeMap(CollisionHandlerEvent)
+registerInTypeMap(CollisionHandlerQueue)
+registerInTypeMap(CollisionSolid)
+registerInTypeMap(CullTraverser)
+registerInTypeMap(DDrawable)
+registerInTypeMap(EaseInBlendType)
+registerInTypeMap(EaseInOutBlendType)
+registerInTypeMap(EaseOutBlendType)
+registerInTypeMap(FloatLerpFunctor)
+registerInTypeMap(GeomBinBackToFront)
+registerInTypeMap(GeomBinFixed)
+registerInTypeMap(GeomBinGroup)
+registerInTypeMap(GeomBinUnsorted)
+registerInTypeMap(GeometricBoundingVolume)
+registerInTypeMap(GraphicsStateGuardian)
+registerInTypeMap(GuiBackground)
+registerInTypeMap(GuiBehavior)
+registerInTypeMap(GuiCollection)
+registerInTypeMap(GuiFrame)
+registerInTypeMap(GuiSign)
+registerInTypeMap(IntLerpFunctor)
+registerInTypeMap(Material)
+registerInTypeMap(MultiLerpFunctor)
+registerInTypeMap(NamedNode)
+registerInTypeMap(NoBlendType)
+registerInTypeMap(NodeRelation)
+registerInTypeMap(NodeTransition)
+registerInTypeMap(OrthoProjection)
+registerInTypeMap(PGMouseWatcherBackground)
+registerInTypeMap(PartGroup)
+registerInTypeMap(PerspectiveProjection)
+registerInTypeMap(PosHprLerpFunctor)
+registerInTypeMap(PosHprScaleLerpFunctor)
+registerInTypeMap(SimpleLerpFunctorLPoint2f)
+registerInTypeMap(SimpleLerpFunctorLPoint3f)
+registerInTypeMap(SimpleLerpFunctorLPoint4f)
+registerInTypeMap(SimpleLerpFunctorLVecBase2f)
+registerInTypeMap(SimpleLerpFunctorLVecBase3f)
+registerInTypeMap(SimpleLerpFunctorLVecBase4f)
+registerInTypeMap(SimpleLerpFunctorLVector2f)
+registerInTypeMap(SimpleLerpFunctorLVector3f)
+registerInTypeMap(SimpleLerpFunctorLVector4f)
+registerInTypeMap(AmbientLight)
+registerInTypeMap(AnimBundle)
+registerInTypeMap(AnimBundleNode)
+registerInTypeMap(AudioGuiFunctor)
+registerInTypeMap(BoundingLine)
+registerInTypeMap(CollisionHandlerPhysical)
+registerInTypeMap(CollisionNode)
+registerInTypeMap(CollisionPlane)
+registerInTypeMap(CollisionRay)
+registerInTypeMap(CollisionSegment)
+registerInTypeMap(CollisionSphere)
+registerInTypeMap(ColorLerpFunctor)
+registerInTypeMap(ColorScaleLerpFunctor)
+registerInTypeMap(DataNode)
+registerInTypeMap(DataRelation)
+registerInTypeMap(DirectionalLight)
+registerInTypeMap(FiniteBoundingVolume)
+registerInTypeMap(FloatQueryLerpFunctor)
+registerInTypeMap(Geom)
+registerInTypeMap(GeomBinNormal)
+registerInTypeMap(GeomNode)
+registerInTypeMap(GuiButton)
+registerInTypeMap(GuiChooser)
+registerInTypeMap(GuiListBox)
+registerInTypeMap(GuiRollover)
+registerInTypeMap(HprLerpFunctor)
+registerInTypeMap(ImageBuffer)
+registerInTypeMap(ImmediateTransition)
+registerInTypeMap(IntQueryLerpFunctor)
+registerInTypeMap(ModelNode)
+registerInTypeMap(MovingPartBase)
+registerInTypeMap(MultiTransitionPointerToLightLightNameClass)
+registerInTypeMap(OmniBoundingVolume)
+registerInTypeMap(OnOffTransition)
+registerInTypeMap(OnTransition)
+registerInTypeMap(PGItem)
+registerInTypeMap(PGTop)
+registerInTypeMap(ParametricCurve)
+registerInTypeMap(PartBundle)
+registerInTypeMap(PartBundleNode)
+registerInTypeMap(PlaneNode)
+registerInTypeMap(PointLight)
+registerInTypeMap(PosLerpFunctor)
+registerInTypeMap(ProjectionNode)
+registerInTypeMap(RenderRelation)
+registerInTypeMap(ScaleLerpFunctor)
+registerInTypeMap(SimpleQueryLerpFunctorLPoint2f)
+registerInTypeMap(SimpleQueryLerpFunctorLPoint3f)
+registerInTypeMap(SimpleQueryLerpFunctorLPoint4f)
+registerInTypeMap(SimpleQueryLerpFunctorLVecBase2f)
+registerInTypeMap(SimpleQueryLerpFunctorLVecBase3f)
+registerInTypeMap(SimpleQueryLerpFunctorLVecBase4f)
+registerInTypeMap(SimpleQueryLerpFunctorLVector2f)
+registerInTypeMap(SimpleQueryLerpFunctorLVector3f)
+registerInTypeMap(SimpleQueryLerpFunctorLVector4f)
+registerInTypeMap(SwitchNode)
+registerInTypeMap(TextNode)
+registerInTypeMap(AnalogNode)
+registerInTypeMap(BoundingSphere)
+registerInTypeMap(ButtonNode)
+registerInTypeMap(ButtonThrower)
+registerInTypeMap(Camera)
+registerInTypeMap(Character)
+registerInTypeMap(CharacterJointBundle)
+registerInTypeMap(ChatInput)
+registerInTypeMap(CollisionHandlerFloor)
+registerInTypeMap(CollisionHandlerPusher)
+registerInTypeMap(CollisionPolygon)
+registerInTypeMap(ColorTransition)
+registerInTypeMap(CubicCurveseg)
+registerInTypeMap(DataValve)
+registerInTypeMap(DecalTransition)
+registerInTypeMap(DepthTestTransition)
+registerInTypeMap(DepthWriteTransition)
+registerInTypeMap(DialNode)
+registerInTypeMap(DirectRenderTransition)
+registerInTypeMap(DriveInterface)
+registerInTypeMap(GeomBinTransition)
+registerInTypeMap(GeomLine)
+registerInTypeMap(GeomLinestrip)
+registerInTypeMap(GeomPoint)
+registerInTypeMap(GeomPolygon)
+registerInTypeMap(GeomQuad)
+registerInTypeMap(GeomSphere)
+registerInTypeMap(GeomSprite)
+registerInTypeMap(GeomTri)
+registerInTypeMap(GeomTrifan)
+registerInTypeMap(GeomTristrip)
+registerInTypeMap(LightTransition)
+registerInTypeMap(ModelRoot)
+registerInTypeMap(MouseAndKeyboard)
+registerInTypeMap(MouseWatcher)
+registerInTypeMap(MovingPartACMatrixSwitchType)
+registerInTypeMap(PGButton)
+registerInTypeMap(PGEntry)
+registerInTypeMap(PGWaitBar)
+registerInTypeMap(PiecewiseCurve)
+registerInTypeMap(PruneTransition)
+registerInTypeMap(Spotlight)
+registerInTypeMap(SwitchNodeOne)
+registerInTypeMap(Texture)
+registerInTypeMap(Trackball)
+registerInTypeMap(TrackerNode)
+registerInTypeMap(Transform2SG)
+registerInTypeMap(TransparencyTransition)
+registerInTypeMap(HermiteCurve)
+registerInTypeMap(LODNode)
+registerInTypeMap(MovingPartMatrix)
+registerInTypeMap(NurbsCurve)
+registerInTypeMap(SequenceNode)
+registerInTypeMap(CharacterJoint)
